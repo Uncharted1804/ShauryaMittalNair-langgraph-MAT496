@@ -39,3 +39,9 @@ This repository contains my code tweaks and progress for the "Intro to LangGraph
 ![alt text](image-4.png)
 
 
+### Module 1, Lesson 6: Agent
+- **Learned:** Understood how to construct a complete, cyclical agent by combining a reasoning node (the agent), a tool execution node, and a conditional edge. This structure allows the agent to loop, calling tools as many times as needed to gather information before generating a final response.
+- **My Tweak:** I built a Weather Agent with two distinct tools for current and forecast weather. The agent correctly routes the user's question, calls the appropriate tool, and then uses the tool's output to formulate a complete answer.
+- **Source File:** [my_tweaks/m1_l6_weather_agent.py](my_tweaks/m1_l6_weather_agent.py)
+![alt text](image-5.png)
+
