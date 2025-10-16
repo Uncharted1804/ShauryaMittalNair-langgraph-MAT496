@@ -22,4 +22,20 @@ This repository contains my code tweaks and progress for the "Intro to LangGraph
 - **My Tweak:** I created a conditional math agent and tested both of its logical paths by invoking the graph directly within the script. The output confirms that the graph correctly routes the state based on the input.
 - **Source File:** [my_tweaks/m1_l3_studio_upload_tweak.py](my_tweaks/m1_l3_studio_upload_tweak.py)
 
+![alt text](image-2.png)
+
+### Module 1, Lesson 4: Chain
+- **Learned:** Understood how to wrap a standard LangChain Expression Language (LCEL) chain into a single, callable node within a LangGraph. This allows for complex, multi-step logic to be encapsulated cleanly inside one part of the graph.
+- **My Tweak:** I created an LCEL chain that generates a funny tweet. This entire chain was then used as the function for a single node in a simple LangGraph, demonstrating how to integrate existing LangChain components.
+- **Source File:** [my_tweaks/m1_l4_lcel_chain_node.py](my_tweaks/m1_l4_lcel_chain_node.py)
+
+![alt text](image-3.png)
+
+
+### Module 1, Lesson 5: Router
+- **Learned:** Understood how to create a router, which is a conditional edge that uses an LLM to decide the next step in the graph. By using an LLM with structured output, we can create reliable and flexible routing logic.
+- **My Tweak:** I built a Customer Service Agent that uses an LLM-based router to classify a user's query. The graph routes the query to a specialized node for billing, technical support, or general inquiries, providing a tailored response.
+- **Source File:** [my_tweaks/m1_l5_customer_service_router.py](my_tweaks/m1_l5_customer_service_router.py)
+![alt text](image-4.png)
+
 
