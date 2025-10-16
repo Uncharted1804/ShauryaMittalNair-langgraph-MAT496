@@ -45,3 +45,11 @@ This repository contains my code tweaks and progress for the "Intro to LangGraph
 - **Source File:** [my_tweaks/m1_l6_weather_agent.py](my_tweaks/m1_l6_weather_agent.py)
 ![alt text](image-5.png)
 
+
+
+### Module 1, Lesson 7: Agent with Memory
+- **Learned:** Understood how to add memory to a LangGraph agent by attaching a `checkpointer` (like `MemorySaver`) during compilation. This allows the graph's state to persist across multiple invocations, enabling multi-turn conversations.
+- **My Tweak:** I built a Conversational Math Agent. In the first turn, it answers a simple addition problem. In the second turn, it correctly uses the result from the first turn to answer a follow-up question, demonstrating its memory.
+- **Source File:** [my_tweaks/m1_l7_conversational_math_agent.py](my_tweaks/m1_l7_conversational_math_agent.py)
+![alt text](image-6.png)
+
