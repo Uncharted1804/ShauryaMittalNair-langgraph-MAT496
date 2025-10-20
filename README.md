@@ -59,4 +59,10 @@ This repository contains my code tweaks and progress for the "Intro to LangGraph
 - **Source File:** [my_tweaks/m2_l1_state_schema_tweak.py](my_tweaks/m2_l1_state_schema_tweak.py)
 ![alt text](image-7.png)
 
+### Module 2, Lesson 2: State Reducers
+- **Learned:** Understood the `(state, action) -> state` reducer pattern. By passing a custom function to the `StateGraph`, I can gain explicit, fine-grained control over how state updates (actions) from each node are merged into the overall graph state, as an alternative to using `Annotated`.
+- **My Tweak:** I refactored my "Work Order" graph to use a `custom_reducer` function. This function explicitly defines the logic for appending new strings to the `work_log` and summing new integers to the `tasks_completed` count.
+- **Source File:** [my_tweaks/m2_l2_state_reducer_tweak.py](my_tweaks/m2_l2_state_reducer_tweak.py)
+![alt text](image-8.png)
+
 
