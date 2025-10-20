@@ -53,3 +53,10 @@ This repository contains my code tweaks and progress for the "Intro to LangGraph
 - **Source File:** [my_tweaks/m1_l7_conversational_math_agent.py](my_tweaks/m1_l7_conversational_math_agent.py)
 ![alt text](image-6.png)
 
+### Module 2, Lesson 1: State Schema
+- **Learned:** Understood how to define a LangGraph state schema using `TypedDict`. Learned to use `Annotated` and operators (like `operator.add`) to precisely control how each field in the state is updated (accumulating/appending values) versus the default behavior (overwriting values).
+- **My Tweak:** I created a "Work Order" graph with a state that has three fields. One field (`current_status`) is overwritten, while a list (`status_history`) and a counter (`steps_completed`) use `operator.add` to accumulate values from multiple nodes, demonstrating the different update mechanisms.
+- **Source File:** [my_tweaks/m2_l1_state_schema_tweak.py](my_tweaks/m2_l1_state_schema_tweak.py)
+![alt text](image-7.png)
+
+
