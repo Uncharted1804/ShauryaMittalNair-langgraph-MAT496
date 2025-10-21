@@ -65,4 +65,16 @@ This repository contains my code tweaks and progress for the "Intro to LangGraph
 - **Source File:** [my_tweaks/m2_l2_state_reducer_tweak.py](my_tweaks/m2_l2_state_reducer_tweak.py)
 ![alt text](image-8.png)
 
+### Module 2, Lesson 3: Multiple Schemas
+- **Learned:** Understood how to nest a subgraph within a main graph. The subgraph can have its own independent state schema and logic. The main graph calls the subgraph as a single node and can map the subgraph's inputs and outputs to its own state.
+- **My Tweak:** I built a "Trip Planner" graph that calls a "Transport Booker" subgraph. The main graph plans activities, then passes the `destination` to the subgraph, which returns a `confirmation` code. The main graph maps this output to its `transport_details` field and finalizes the plan.
+- **Source File:** [my_tweaks/m2_l3_nested_graphs_tweak.py](my_tweaks/m2_l3_nested_graphs_tweak.py)
+
+
+### Module 2, Lesson 3: Multiple Schemas
+- **Learned:** Understood how to nest a subgraph within a main graph. The subgraph can have its own independent state schema and logic. The main graph calls the subgraph as a single node and can map the subgraph's inputs and outputs to its own state.
+- **My Tweak:** I built a "Trip Planner" graph that calls a "Transport Booker" subgraph. The main graph plans activities, then passes the `destination` to the subgraph, which returns a `confirmation` code. The main graph maps this output to its `transport_details` field and finalizes the plan.
+- **Source File:** [my_tweaks/m2_l3_nested_graphs_tweak.py](my_tweaks/m2_l3_nested_graphs_tweak.py)
+![alt text](image-9.png)
+
 
