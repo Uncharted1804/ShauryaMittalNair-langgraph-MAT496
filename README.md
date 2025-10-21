@@ -85,3 +85,9 @@ This repository contains my code tweaks and progress for the "Intro to LangGraph
 
 
 
+### Module 2, Lesson 5: Chatbot with Summarization
+- **Learned:** Learned a more advanced memory technique. Instead of just trimming messages, I created a separate LCEL `summarizer_chain` to compress the context of older messages.
+- **My Tweak:** I modified the `agent_node` to check the message history length. If it's too long, it calls the `summarizer_chain` on the older messages, creates a `SystemMessage` with the new summary, and passes this summary (plus the most recent messages) to the main agent, preserving long-term context.
+- **Source File:** [my_tweaks/m2_l5_summarizing_agent.py](my_tweaks/m2_l5_summarizing_agent.py)
+![alt text](image-11.png)
+
