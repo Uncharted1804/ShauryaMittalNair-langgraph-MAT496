@@ -91,3 +91,10 @@ This repository contains my code tweaks and progress for the "Intro to LangGraph
 - **Source File:** [my_tweaks/m2_l5_summarizing_agent.py](my_tweaks/m2_l5_summarizing_agent.py)
 ![alt text](image-11.png)
 
+
+### Module 2, Lesson 6: Chatbot with External Memory
+- **Learned:** Understood how to make agent memory persistent by swapping the volatile `MemorySaver` for a persistent checkpointer like `SqliteSaver`. This saves the conversation state to an external database.
+- **My Tweak:** I modified my summarizing agent to use `SqliteSaver.from_conn_string("my_conversation_memory.sqlite")`. When the script runs, it now creates a `.sqlite` database file in my project folder, proving that the conversation state is being saved externally and can persist across multiple sessions.
+- **Source File:** [my_tweaks/m2_l6_persistent_memory_agent.py](my_tweaks/m2_l6_persistent_memory_agent.py)
+![alt text](<Screenshot 2025-10-21 151553.png>)
+
