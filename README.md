@@ -77,4 +77,11 @@ This repository contains my code tweaks and progress for the "Intro to LangGraph
 - **Source File:** [my_tweaks/m2_l3_nested_graphs_tweak.py](my_tweaks/m2_l3_nested_graphs_tweak.py)
 ![alt text](image-9.png)
 
+### Module 2, Lesson 4: Trim and Filter Messages
+- **Learned:** Understood the importance of managing the conversation history to prevent it from exceeding the LLM's context window. Learned to implement a simple trimming mechanism by slicing the `messages` list in the state before it's passed to the agent node.
+- **My Tweak:** I modified my conversational math agent's `agent_node`. Before invoking the LLM, the node checks the length of the message history. If it exceeds 6 messages, it trims the list, keeping only the 6 most recent messages. This was tested over 3 turns to confirm the trimming logic activates.
+- **Source File:** [my_tweaks/m2_l4_history_trimming_tweak.py](my_tweaks/m2_l4_history_trimming_tweak.py)
+![alt text](image-10.png)
+
+
 
