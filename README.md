@@ -98,3 +98,11 @@ This repository contains my code tweaks and progress for the "Intro to LangGraph
 - **Source File:** [my_tweaks/m2_l6_persistent_memory_agent.py](my_tweaks/m2_l6_persistent_memory_agent.py)
 ![alt text](<Screenshot 2025-10-21 151553.png>)
 
+
+### Module 3, Lesson 1: Streaming
+- **Learned:** Understood how to use `app.stream()` to get real-time, partial outputs (events) from each node as the graph runs. This is crucial for user-facing applications, as it provides immediate feedback instead of waiting for the final result like `app.invoke()`.
+- **My Tweak:** I modified my conversational math agent to use `app.stream()`. I then iterated over the output and printed each raw event, clearly showing the flow of state updates from the `agent_node` and `tool_node` as they happened.
+- **Source File:** [my_tweaks/m3_l1_streaming_agent.py](my_tweaks/m3_l1_streaming_agent.py)
+![alt text](image-12.png)
+![alt text](image-13.png)
+![alt text](image-14.png)
