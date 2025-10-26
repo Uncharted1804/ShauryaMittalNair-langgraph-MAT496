@@ -112,3 +112,12 @@ This repository contains my code tweaks and progress for the "Intro to LangGraph
 - **My Tweak:** I built an agent with a 'dangerous' tool and set a breakpoint *before* the `tool_node`. The graph ran, paused after the agent decided to use the tool, and I then resumed the graph by calling `app.stream(None, ...)` to simulate human approval and let the tool run.
 - **Source File:** [my_tweaks/m3_l2_breakpoint_tweak.py](my_tweaks/m3_l2_breakpoint_tweak.py)
 ![alt text](image-15.png)
+
+
+### Module 3, Lesson 3: Editing State and Human Feedback
+- **Learned:** Understood how to use `app.update_state()` to manually modify a graph's state while it's paused at a breakpoint. This enables a true human-in-the-loop (HITL) workflow where a human can correct an agent's plan.
+- **My Tweak:** I extended my breakpoint agent. When it paused, I used `app.update_state()` to add a `HumanMessage` with a correction. The graph resumed, looped back to the agent, which then formulated a *new* plan based on my feedback. The graph paused a second time, and I then approved this corrected plan, completing the HITL feedback loop.
+- **Source File:** [my_tweaks/m3_l3_editing_state_tweak.py](my_tweaks/m3_l3_editing_state_tweak.py)
+![alt text](image-16.png)
+![alt text](image-17.png)
+
