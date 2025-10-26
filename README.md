@@ -107,5 +107,8 @@ This repository contains my code tweaks and progress for the "Intro to LangGraph
 ![alt text](image-13.png)
 ![alt text](image-14.png)
 
-
+### Module 3, Lesson 2: Breakpoints
+- **Learned:** Understood how to use breakpoints (`interrupt_before`) to pause a graph's execution. This is the key to creating human-in-the-loop (HITL) workflows, allowing for human review or approval before a specific node (like a tool) is run.
+- **My Tweak:** I built an agent with a 'dangerous' tool and set a breakpoint *before* the `tool_node`. The graph ran, paused after the agent decided to use the tool, and I then resumed the graph by calling `app.stream(None, ...)` to simulate human approval and let the tool run.
+- **Source File:** [my_tweaks/m3_l2_breakpoint_tweak.py](my_tweaks/m3_l2_breakpoint_tweak.py)
 ![alt text](image-15.png)
