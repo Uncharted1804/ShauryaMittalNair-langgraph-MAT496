@@ -121,3 +121,12 @@ This repository contains my code tweaks and progress for the "Intro to LangGraph
 ![alt text](image-16.png)
 ![alt text](image-17.png)
 
+### Module 3, Lesson 4: Dynamic Breakpoints
+- **Learned:** Understood how to create dynamic breakpoints. By using `interrupt_after` to pause after a node, I can use a conditional router to inspect the agent's plan and *dynamically* decide whether to continue automatically or return the `__interrupt__` value to pause for human review.
+- **My Tweak:** I built an agent with a "safe" `get_user_profile` tool and a "dangerous" `update_user_profile` tool. My dynamic router checks the agent's plan: it auto-proceeds for the safe tool but triggers an `__interrupt__` for the dangerous tool, successfully creating a context-aware HITL workflow.
+- **Source File:** [my_tweaks/m3_l4_dynamic_breakpoint_tweak.py](my_tweaks/m3_l4_dynamic_breakpoint_tweak.py)
+![alt text](image-18.png)
+![alt text](image-19.png)
+![alt text](image-20.png)
+
+
