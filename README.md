@@ -142,4 +142,10 @@ This repository contains my code tweaks and progress for the "Intro to LangGraph
 ![alt text](image-22.png)
 
 
+### Module 4, Lesson 2: Sub-graphs
+- **Learned:** Understood how to nest a compiled graph (a subgraph) inside a main graph as a node. This is a powerful pattern for modularity, allowing a "manager" graph to call a "worker" graph. This is especially useful for creating a dedicated "tool-using" subgraph that an agent can call.
+- **My Tweak:** I refactored my weather agent into two graphs. The main graph holds the "thinker" (LLM) and router. The router then calls a new, compiled "tool-using subgraph" whose only job is to execute the tool call and return the result. The main graph then loops back to the thinker.
+- **Source File:** [my_tweaks/m4_l2_subgraph_agent_tweak.py](my_tweaks/m4_l2_subgraph_agent_tweak.py)
+![alt text](image-23.png)
+
 
