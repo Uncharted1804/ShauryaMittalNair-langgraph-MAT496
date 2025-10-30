@@ -153,3 +153,11 @@ This repository contains my code tweaks and progress for the "Intro to LangGraph
 - **My Tweak:** I built a 'Research Assistant' graph. A 'mapper' node takes a list of topics and generates a summary for each one *in parallel* using `.batch()`. A 'reducer' node then takes this list of summaries and combines them into a single, cohesive report.
 - **Source File:** [my_tweaks/m4_l3_map_reduce_tweak.py](my_tweaks/m4_l3_map_reduce_tweak.py)
 ![alt text](image-24.png)
+
+### Module 4, Lesson 4: Research Assistant (Capstone)
+- **Learned:** This capstone project combined all course concepts. I built a multi-step agent that: 1. Uses a `search_agent` node to plan and call a `TavilySearch` tool for URLs. 2. Uses a `web_scraper` node as the "Map" step to scrape content from all URLs. 3. Uses a `generate_report` node as the "Reduce" step to synthesize all scraped content into a final answer.
+- **My Tweak:** I successfully built and ran the full research assistant. The graph correctly moves from searching, to scraping, to generating a final report based on the live web content, demonstrating a complete map-reduce and tool-use workflow.
+- **Source File:** [my_tweaks/m4_l4_research_agent_tweak.py](my_tweaks/m4_l4_research_agent_tweak.py)
+![alt text](image-25.png)
+![alt text](image-26.png)
+
