@@ -148,4 +148,8 @@ This repository contains my code tweaks and progress for the "Intro to LangGraph
 - **Source File:** [my_tweaks/m4_l2_subgraph_agent_tweak.py](my_tweaks/m4_l2_subgraph_agent_tweak.py)
 ![alt text](image-23.png)
 
-
+### Module 4, Lesson 3: Map-Reduce
+- **Learned:** Understood the Map-Reduce pattern for parallel processing. A 'map' node can process a list of items concurrently (e.g., using an LCEL chain's `.batch()` method), and a 'reduce' node can then join these parallel results into a single output.
+- **My Tweak:** I built a 'Research Assistant' graph. A 'mapper' node takes a list of topics and generates a summary for each one *in parallel* using `.batch()`. A 'reducer' node then takes this list of summaries and combines them into a single, cohesive report.
+- **Source File:** [my_tweaks/m4_l3_map_reduce_tweak.py](my_tweaks/m4_l3_map_reduce_tweak.py)
+![alt text](image-24.png)
