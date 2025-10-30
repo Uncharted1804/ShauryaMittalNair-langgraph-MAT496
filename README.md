@@ -135,4 +135,11 @@ This repository contains my code tweaks and progress for the "Intro to LangGraph
 - **Source File:** [my_tweaks/m3_l5_time_travel_memory_tweak.py](my_tweaks/m3_l5_time_travel_memory_tweak.py)
 ![alt text](image-21.png)
 
+### Module 4, Lesson 1: Parallelization
+- **Learned:** Understood how to execute multiple nodes in parallel. By adding multiple edges from a single starting point (like `START` or another node), LangGraph runs all target nodes concurrently. A subsequent node can be set as a "joiner" node, which waits for all parallel branches to complete before it runs.
+- **My Tweak:** I built a "Trip Planner" graph that branches from `START` to two parallel nodes: `get_weather_node` and `get_attractions_node`. A final `combiner` node waits for both to finish, then prints the combined results, demonstrating a parallel "fan-out" and "join" pattern.
+- **Source File:** [my_tweaks/m4_l1_parallel_nodes_tweak.py](my_tweaks/m4_l1_parallel_nodes_tweak.py)
+![alt text](image-22.png)
+
+
 
