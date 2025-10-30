@@ -129,4 +129,10 @@ This repository contains my code tweaks and progress for the "Intro to LangGraph
 ![alt text](image-19.png)
 ![alt text](image-20.png)
 
+### Module 3, Lesson 5: Time Travel
+- **Learned:** Understood how to use a checkpointer (`MemorySaver`) to enable "time travel." By using `app.get_state_history()` to find a past checkpoint and passing its `thread_ts` to `app.update_state()` and `app.stream()`, I can rewind the graph's state and fork the conversation from a previous point.
+- **My Tweak:** My agent made a "bad" plan and paused. I used `get_state_history` to find the checkpoint *before* this plan, then used `update_state(..., thread_ts=...)` to add a correction. Resuming from that point, the agent made a *new*, correct plan, which I then approved. This demonstrates a complete "time travel" correction loop using in-memory state.
+- **Source File:** [my_tweaks/m3_l5_time_travel_memory_tweak.py](my_tweaks/m3_l5_time_travel_memory_tweak.py)
+![alt text](image-21.png)
+
 
